@@ -1,0 +1,9 @@
+.intensity {
+  width: 363px;
+  height: 361px;
+  background: url('./intensity.png') no-repeat;
+  position: relative;
+}
+.arrow {
+  position: absolute;
+}
