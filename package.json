@@ -1,7 +1,15 @@
 {
   "name": "react-environment-chart",
-  "version": "0.1.0",
+  "version": "0.1.0-alpha.1",
   "private": true,
+  "author": "xuqiang",
+  "email": "xuqiang@wafersystms.com", 
+  "license": "MIT",
+  "keywords": [ 
+    "react",
+    "environment",
+    "chart" 
+    ], 
   "dependencies": {
     "classnames": "^2.2.5",
     "react": "^16.2.0",
