@@ -1,7 +1,7 @@
 {
   "name": "react-environment-chart",
   "version": "0.1.0-alpha.1",
-  "private": true,
+  "private": false,
   "author": "xuqiang",
   "email": "xuqiang@wafersystms.com", 
   "license": "MIT",
