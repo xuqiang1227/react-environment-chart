@@ -1,0 +1,10 @@
+.pm {
+  background: url('./PM25.png') no-repeat;
+  position: relative;
+}
+.arrow {
+  position: absolute;
+}
+.center {
+  position: absolute;
+}

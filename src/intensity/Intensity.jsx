@@ -1,6 +1,5 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import './intensity.css';
 import arrow from './arrow.png';
 import center from './center.png';
