@@ -1,9 +1,15 @@
 {
   "name": "react-environment-chart",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
+  "private": false,
   "author": "xuqiang",
-  "email": "xuqiang@wafersystms.com", 
+  "email": "kairi1227@126.com", 
   "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kairi1227/react-environment-charts.git"
+  },
   "keywords": [ 
     "react",
     "environment",
