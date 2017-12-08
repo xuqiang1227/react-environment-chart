@@ -1,9 +1,14 @@
 .intensity {
-  width: 363px;
-  height: 361px;
   background: url('./intensity.png') no-repeat;
   position: relative;
 }
 .arrow {
+  position: absolute;
+  transition: All 0.4s ease-in-out;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+}
+.center {
   position: absolute;
 }
