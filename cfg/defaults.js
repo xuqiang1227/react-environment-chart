@@ -7,7 +7,7 @@
 'use strict';
 
 const path = require('path');
-const srcPath = path.join(__dirname, '/../src');
+const srcPath = path.join(__dirname, '/../example');
 const dfltPort = 8000;
 
 /**
@@ -16,41 +16,19 @@ const dfltPort = 8000;
  */
 function getDefaultModules() {
   return {
-    preLoaders: [
+    loaders: [
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        loader: 'eslint-loader'
-      }
-    ],
-    loaders: [
+        loader: 'babel-loader'
+      },
       {
         test: /\.css$/,
         loader: 'style-loader!css-loader'
       },
       {
-        test: /\.sass/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
-      },
-      {
-        test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
-      },
-      {
-        test: /\.less/,
-        loader: 'style-loader!css-loader!less-loader'
-      },
-      {
-        test: /\.styl/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      },
-      {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192'
-      },
-      {
-        test: /\.(mp4|ogg|svg)$/,
-        loader: 'file-loader'
       }
     ]
   };
@@ -58,7 +36,7 @@ function getDefaultModules() {
 
 module.exports = {
   srcPath: srcPath,
-  publicPath: '/assets/',
+  publicPath: '/',
   port: dfltPort,
   getDefaultModules: getDefaultModules
 };

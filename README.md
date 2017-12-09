@@ -1,4 +1,8 @@
-React Environment charts, such as PM2.5 Temperature
+# React Environment charts
+[![npm](https://img.shields.io/npm/v/react-environment-chart.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-environment-chartl)
+![react-version](https://img.shields.io/badge/react%20version-15.0.0%20or%20later-61dafb.svg)
+![license-mit](https://img.shields.io/badge/license-MIT-42cd00.svg)
+
 
 ### Using
 

@@ -10,9 +10,9 @@ let defaultSettings = require('./defaults');
 let additionalPaths = [];
 
 module.exports = {
-  additionalPaths: additionalPaths,
-  port: defaultSettings.port,
-  debug: true,
+  // additionalPaths: additionalPaths,
+  // port: defaultSettings.port,
+  // debug: true,
   devtool: 'eval',
   output: {
     path: path.join(__dirname, '/../dist'),
@@ -20,7 +20,7 @@ module.exports = {
     publicPath: defaultSettings.publicPath
   },
   devServer: {
-    contentBase: './src/example',
+    contentBase: './example',
     historyApiFallback: true,
     hot: true,
     port: defaultSettings.port,
@@ -28,16 +28,7 @@ module.exports = {
     noInfo: false
   },
   resolve: {
-    extensions: ['', '.js', '.jsx'],
-    alias: {
-      actions: `${defaultSettings.srcPath}/actions/`,
-      components: `${defaultSettings.srcPath}/components/`,
-      sources: `${defaultSettings.srcPath}/sources/`,
-      stores: `${defaultSettings.srcPath}/stores/`,
-      styles: `${defaultSettings.srcPath}/styles/`,
-      config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV,
-      'react/lib/ReactMount': 'react-dom/lib/ReactMount'
-    }
+    extensions: ['.js', '.jsx']
   },
   module: {}
 };

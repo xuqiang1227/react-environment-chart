@@ -1,32 +1,36 @@
 'use strict';
 
-const path = require('path');
-const args = require('minimist')(process.argv.slice(2));
+let path = require('path');
 
-// List of allowed environments
-const allowedEnvs = ['dev', 'dist', 'test'];
+console.log(path.join(__dirname, './src'));
 
-// Set the correct environment
-let env;
-if (args._.length > 0 && args._.indexOf('start') !== -1) {
-  env = 'test';
-} else if (args.env) {
-  env = args.env;
-} else {
-  env = 'dev';
-}
-process.env.REACT_WEBPACK_ENV = env;
-
-/**
- * Build the webpack configuration
- * @param  {String} wantedEnv The wanted environment
- * @return {Object} Webpack config
- */
-function buildConfig(wantedEnv) {
-  let isValid = wantedEnv && wantedEnv.length > 0 && allowedEnvs.indexOf(wantedEnv) !== -1;
-  let validEnv = isValid ? wantedEnv : 'dev';
-  let config = require(path.join(__dirname, 'cfg/' + validEnv));
-  return config;
-}
-
-module.exports = buildConfig(env);
+module.exports = {
+  entry: {
+    EnvironmentChart: './src/EnvironmentChart.jsx'
+  },
+  output: {
+    path: path.join(__dirname, './dist'),
+    filename: '[name].js',
+    libraryTarget: "umd"
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.(js|jsx)$/,
+        loader: 'babel-loader',
+        include: [path.join(__dirname, './src')]
+      },
+      {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2)$/,
+        loader: 'url-loader?limit=120000'
+      }
+    ]
+  },
+  externals: {
+    'react': 'react'
+  }
+};
