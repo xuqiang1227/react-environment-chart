@@ -11,8 +11,7 @@
     "url": "git+https://github.com/kairi1227/react-environment-charts.git"
   },
   "files": [
-    "dist",
-    "lib"
+    "dist"
   ],
   "keywords": [
     "react",
