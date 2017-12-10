@@ -20,6 +20,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
   <Intensity />
   ```
 * eg:
+
 ![Intensity](https://static.oschina.net/uploads/img/201712/10171113_DnD4.png =100x)
 
 ### PM2.5
@@ -31,4 +32,5 @@ import ReactEnvironmentChart from 'react-environment-chart';
   <PM value={20} />
   ```
 * eg:
+
 ![PM2.5](https://static.oschina.net/uploads/img/201712/10171034_N6W0.png =100x)
