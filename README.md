@@ -21,7 +21,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
   ```
 * eg:
 
-![Intensity](https://static.oschina.net/uploads/img/201712/10171113_DnD4.png =100x)
+![Intensity](https://static.oschina.net/uploads/img/201712/10171113_DnD4.png)
 
 ### PM2.5
 * height: number, option. specify pm size; default: 373
@@ -33,4 +33,4 @@ import ReactEnvironmentChart from 'react-environment-chart';
   ```
 * eg:
 
-![PM2.5](https://static.oschina.net/uploads/img/201712/10171034_N6W0.png =100x)
+![PM2.5](https://static.oschina.net/uploads/img/201712/10171034_N6W0.png)
