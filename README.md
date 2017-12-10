@@ -1,8 +1,6 @@
 # React Environment charts
 [![npm](https://img.shields.io/npm/v/react-environment-chart.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-environment-chartl)
-![react-version](https://img.shields.io/badge/react%20version-15.0.0%20or%20later-61dafb.svg)
-![license-mit](https://img.shields.io/badge/license-MIT-42cd00.svg)
-
+[![NPM downloads](http://img.shields.io/npm/dm/react-environment-chart.svg?style=flat-square)](https://npmjs.org/package/react-environment-chart)
 
 ### Using
 
@@ -21,6 +19,8 @@ import ReactEnvironmentChart from 'react-environment-chart';
 
   <Intensity />
   ```
+* eg:
+[Intensity](https://static.oschina.net/uploads/img/201712/10171113_DnD4.png)
 
 ### PM2.5
 * height: number, option. specify pm size; default: 373
@@ -30,3 +30,5 @@ import ReactEnvironmentChart from 'react-environment-chart';
   import {PM} from 'react-environment-chart';
   <PM value={20} />
   ```
+* eg:
+[PM2.5](https://static.oschina.net/uploads/img/201712/10171034_N6W0.png)
