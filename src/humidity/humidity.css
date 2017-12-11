@@ -1,27 +1,29 @@
 .normal {
   position: relative;
-  width: 498px;
-  height: 252px;
 }
 .dry {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: 28px;
 }
 .comfort {
   position: absolute;
   top: 0;
-  left: 43%;
+  left: 60%;
 }
 .wet {
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 28px;
 }
 .humidity {
   position: absolute;
-  margin: 30px 30px 0 30px;
-  width: 428px;
-  height: 252px;
+  margin: 30px 28px 0 25px;
   background: url('./humidity.png') no-repeat;
+}
+.arrow {
+  position: absolute;
+}
+.center {
+  position: absolute;
 }

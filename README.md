@@ -1,6 +1,6 @@
 # React Environment charts
 [![npm](https://img.shields.io/npm/v/react-environment-chart.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-environment-chart)
-[![NPM downloads](http://img.shields.io/npm/dm/react-environment-chart.svg?style=flat-square)](https://npmjs.org/package/react-environment-chart)
+[![NPM downloads](http://img.shields.io/npm/dm/react-environment-chart.svg?style=flat-plastic)](https://npmjs.org/package/react-environment-chart)
 
 ### Using
 
@@ -34,3 +34,15 @@ import ReactEnvironmentChart from 'react-environment-chart';
 * eg:
 
 ![PM2.5](https://static.oschina.net/uploads/img/201712/11114042_Rfim.png)
+
+### Humidity
+* height: number, option. specify humidity size; default: 252
+* value: number. humidity value
+* using
+  ```javascript
+  import {Humidity} from 'react-environment-chart';
+  <Humidity value={20} />
+  ```
+* eg:
+
+![PM2.5](https://static.oschina.net/uploads/img/201712/11114055_eaXk.png)
