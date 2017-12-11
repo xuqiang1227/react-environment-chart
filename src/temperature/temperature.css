@@ -1,0 +1,9 @@
+.temperature {
+  background: url('./temperature.png') no-repeat;
+  background-position: right;
+}
+.tip {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

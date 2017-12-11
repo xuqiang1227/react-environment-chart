@@ -1,5 +1,5 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Test, {PM, Humidity, Electricity, Tvoc} from '../src/EnvironmentChart.jsx';
+import Test, {PM, Humidity, Electricity, Tvoc, Temperature} from '../src/EnvironmentChart.jsx';
 
-render(<Tvoc value={8.5}/>, document.getElementById('app'));
+render(<Temperature height={250}/>, document.getElementById('app'));

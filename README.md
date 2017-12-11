@@ -69,3 +69,15 @@ import ReactEnvironmentChart from 'react-environment-chart';
 * eg:
 
 ![Tvoc](https://static.oschina.net/uploads/img/201712/11114105_lkLW.png)
+
+### Temperature
+* height: number, option. specify temperature size; default: 556
+* tips: array, option. specity left text; default: ['天冷', '加衣服', '温度舒适', '防暑']
+* using
+  ```javascript
+  import {Temperature} from 'react-environment-chart';
+  <Temperature />
+  ```
+* eg:
+
+![Temperature](https://static.oschina.net/uploads/img/201712/11114124_PwLJ.png)
