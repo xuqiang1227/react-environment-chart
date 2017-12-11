@@ -31,7 +31,7 @@ function getDefaultModules() {
         loader: 'url-loader?limit=8192'
       }
     ],
-    exprContextCritical: false,
+    exprContextCritical: false
   };
 }
 

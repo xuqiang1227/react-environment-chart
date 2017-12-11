@@ -20,12 +20,12 @@ module.exports = {
     publicPath: defaultSettings.publicPath
   },
   devServer: {
-    contentBase: './example',
     historyApiFallback: true,
     hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    inline: true
   },
   resolve: {
     extensions: ['.js', '.jsx']
