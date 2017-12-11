@@ -2,8 +2,8 @@ import Pm from './pm/Pm.jsx';
 import _Intensity from './intensity/Intensity.jsx';
 import _Humidity from './humidity/Humidity.jsx';
 import _Ele from './electricity/Electricity.jsx';
-import tvoc from './tvoc/Tvoc';
-import _Temperature from './temperature/Temperature';
+import tvoc from './tvoc/Tvoc.jsx';
+import _Temperature from './temperature/Temperature.jsx';
 
 let EnvironmentChart = {};
 EnvironmentChart.PM = Pm;
