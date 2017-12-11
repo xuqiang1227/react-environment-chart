@@ -1,0 +1,10 @@
+.tvoc {
+  background: url('./TVOC.png') no-repeat;
+  text-align: right;
+}
+.tip {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

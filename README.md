@@ -58,3 +58,14 @@ import ReactEnvironmentChart from 'react-environment-chart';
 * eg:
 
 ![Electricity](https://static.oschina.net/uploads/img/201712/11114115_WR0q.png)
+
+### Tvoc
+* height: number, option. specify tvoc size; default: 332
+* using
+  ```javascript
+  import {Tvoc} from 'react-environment-chart';
+  <Tvoc />
+  ```
+* eg:
+
+![Tvoc](https://static.oschina.net/uploads/img/201712/11114105_lkLW.png)
