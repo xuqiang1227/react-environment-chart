@@ -2,8 +2,9 @@ import React, {PureComponent} from 'react';
 import './humidity.css';
 import arrow from './arrow.png';
 import center from './center.png';
+import PropTypes from 'prop-types';
 
-export default class extends PureComponent {
+class Humidity extends PureComponent {
   constructor() {
     super(...arguments);
   }
@@ -50,3 +51,10 @@ export default class extends PureComponent {
     );
   }
 }
+
+Humidity.PropTypes = {
+  height: PropTypes.number,
+  value: PropTypes.number
+}
+
+export default Humidity;

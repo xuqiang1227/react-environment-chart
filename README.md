@@ -45,4 +45,16 @@ import ReactEnvironmentChart from 'react-environment-chart';
   ```
 * eg:
 
-![PM2.5](https://static.oschina.net/uploads/img/201712/11114055_eaXk.png)
+![Humidity](https://static.oschina.net/uploads/img/201712/11114055_eaXk.png)
+
+### Electricity
+* height: number, option. specify electricity size; default: 373
+* value: number. electricity value
+* using
+  ```javascript
+  import {Electricity} from 'react-environment-chart';
+  <Electricity value={20} />
+  ```
+* eg:
+
+![Electricity](https://static.oschina.net/uploads/img/201712/11114115_WR0q.png)
