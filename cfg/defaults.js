@@ -7,7 +7,7 @@
 'use strict';
 
 const path = require('path');
-const srcPath = path.join(__dirname, '/../example');
+const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
 
 /**
@@ -19,7 +19,7 @@ function getDefaultModules() {
     loaders: [
       {
         test: /\.(js|jsx)$/,
-        include: srcPath,
+        include: [path.join(__dirname, '/../example'), srcPath],
         loader: 'babel-loader'
       },
       {
@@ -30,7 +30,8 @@ function getDefaultModules() {
         test: /\.(png|jpg|gif|woff|woff2)$/,
         loader: 'url-loader?limit=8192'
       }
-    ]
+    ],
+    exprContextCritical: false,
   };
 }
 
@@ -38,5 +39,5 @@ module.exports = {
   srcPath: srcPath,
   publicPath: '/',
   port: dfltPort,
-  getDefaultModules: getDefaultModules
+  getDefaultModules: getDefaultModules,
 };
