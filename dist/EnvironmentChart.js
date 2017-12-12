@@ -901,8 +901,6 @@ var _center2 = _interopRequireDefault(_center);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -946,10 +944,11 @@ var Pm = function (_PureComponent) {
       var value = this.props.value || 0;
       var height = this.props.height || 373;
       var width = 374 * height / 373;
-      var pmStyle = _defineProperty({
+      var pmStyle = {
         height: height,
         width: width,
-        backgroundSize: width }, 'height', height);
+        backgroundSize: width
+      };
       var arrowHeight = 95 * height / 373,
           arrowWidth = 22 * height / 373;
       var arrowStyle = {
@@ -1844,8 +1843,6 @@ var _center2 = _interopRequireDefault(_center);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -1867,10 +1864,11 @@ var Intensity = function (_PureComponent) {
       var rotate = this.props.rotate || 0;
       var height = this.props.height || 363;
       var width = 361 * height / 363;
-      var intensityStyles = _defineProperty({
+      var intensityStyles = {
         height: height,
         width: width,
-        backgroundSize: width }, 'height', height);
+        backgroundSize: width
+      };
       var arrowHeight = 95 * height / 363,
           arrowWidth = 22 * height / 363;
       var arrowStyle = {
@@ -2012,26 +2010,27 @@ var Humidity = function (_PureComponent) {
         rotate = 100;
       }
       var height = this.props.height || 252;
-      var width = 428 * height / 252;
+      var a = height / 252;
+      var width = 428 * a;
       var humidityStyles = {
         height: height + 25,
         width: width + 53
       };
-      var arrowHeight = 114 * height / 252,
-          arrowWidth = 24 * height / 252;
+      var arrowHeight = 114 * a,
+          arrowWidth = 24 * a;
       var arrowStyle = {
         width: arrowWidth,
         height: arrowHeight,
-        top: height - arrowHeight + 12.5 - 20.5,
+        bottom: 33.5 * a,
         left: (width - arrowWidth) / 2 + 25.5,
         transform: 'rotate(' + (rotate * 180 / 100 - 90) + 'deg)',
         transformOrigin: 'center bottom'
       };
-      var centerSize = 41 * height / 252;
+      var centerSize = 41 * a;
       var centerStyle = {
         width: centerSize,
         height: centerSize,
-        top: height - centerSize + 12.5,
+        bottom: (67 * a - centerSize) / 2,
         left: (width - centerSize) / 2 + 25.5
       };
       return _react2.default.createElement(
@@ -2052,7 +2051,7 @@ var Humidity = function (_PureComponent) {
           { className: 'wet' },
           'wet'
         ),
-        _react2.default.createElement('div', { className: 'humidity', style: { height: height, width: width } }),
+        _react2.default.createElement('div', { className: 'humidity', style: { height: height, width: width, backgroundSize: width + 'px' } }),
         _react2.default.createElement('img', { className: 'arrow', src: _arrow2.default, style: arrowStyle }),
         _react2.default.createElement('img', { className: 'center', src: _center2.default, style: centerStyle })
       );
@@ -2104,7 +2103,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".normal {\r\n  position: relative;\r\n}\r\n.dry {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: 28px;\r\n}\r\n.comfort {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 60%;\r\n}\r\n.wet {\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 28px;\r\n}\r\n.humidity {\r\n  position: absolute;\r\n  margin: 30px 28px 0 25px;\r\n  background: url(" + __webpack_require__(27) + ") no-repeat;\r\n}\r\n.arrow {\r\n  position: absolute;\r\n}\r\n.center {\r\n  position: absolute;\r\n}", ""]);
+exports.push([module.i, ".normal {\r\n  position: relative;\r\n}\r\n.dry {\r\n  position: absolute;\r\n  left: 0;\r\n  bottom: 28px;\r\n}\r\n.comfort {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 55%;\r\n}\r\n.wet {\r\n  position: absolute;\r\n  right: 0;\r\n  bottom: 28px;\r\n}\r\n.humidity {\r\n  position: absolute;\r\n  margin: 30px 28px 0 25px;\r\n  background: url(" + __webpack_require__(27) + ") no-repeat;\r\n}\r\n.arrow {\r\n  position: absolute;\r\n}\r\n.center {\r\n  position: absolute;\r\n}", ""]);
 
 // exports
 
@@ -2160,8 +2159,6 @@ var _center2 = _interopRequireDefault(_center);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -2189,10 +2186,11 @@ var Electricity = function (_PureComponent) {
       }
       var height = this.props.height || 373;
       var width = 374 * height / 373;
-      var pmStyle = _defineProperty({
+      var pmStyle = {
         height: height,
         width: width,
-        backgroundSize: width }, 'height', height);
+        backgroundSize: width
+      };
       var arrowHeight = 95 * height / 373,
           arrowWidth = 22 * height / 373;
       var arrowStyle = {
@@ -2300,8 +2298,6 @@ __webpack_require__(35);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -2324,11 +2320,11 @@ var Tvoc = function (_PureComponent) {
           height = _props$height === undefined ? 332 : _props$height;
 
       var width = 58 * height / 332;
-      var styles = _defineProperty({
+      var styles = {
         width: width + 50,
         height: height,
         backgroundSize: width
-      }, 'height', height);
+      };
       return _react2.default.createElement(
         'div',
         { className: 'tvoc', style: styles },
@@ -2435,8 +2431,6 @@ __webpack_require__(39);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -2462,11 +2456,11 @@ var Temperature = function (_PureComponent) {
           tips = _props$tips === undefined ? [] : _props$tips;
 
       var width = 225 * height / 556;
-      var styles = _defineProperty({
+      var styles = {
         width: width + 65,
         height: height,
         backgroundSize: width
-      }, 'height', height);
+      };
       var paddingTop = 40 * height / 556,
           paddingBottom = 100 * height / 556;
       var tipStyle = {

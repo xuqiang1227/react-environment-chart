@@ -19,7 +19,7 @@ class Electricity extends PureComponent {
     const pmStyle = {
       height,
       width,
-      backgroundSize: width, height
+      backgroundSize: width
     }
     const arrowHeight = 95 * height / 373, arrowWidth = 22 * height / 373;
     const arrowStyle = {

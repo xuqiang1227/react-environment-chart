@@ -13,7 +13,7 @@ class Intensity extends PureComponent {
     const intensityStyles = {
       height,
       width,
-      backgroundSize: width, height
+      backgroundSize: width
     }
     const arrowHeight = 95 * height / 363, arrowWidth = 22 * height / 363;
     const arrowStyle = {

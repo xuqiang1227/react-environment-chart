@@ -11,8 +11,7 @@ class Tvoc extends PureComponent {
     const styles = {
       width: width + 50,
       height,
-      backgroundSize: width,
-      height
+      backgroundSize: width
     };
     return (
       <div className="tvoc" style={styles}>

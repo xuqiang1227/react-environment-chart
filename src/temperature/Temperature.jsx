@@ -12,8 +12,7 @@ class Temperature extends PureComponent {
     const styles = {
       width: width + 65,
       height,
-      backgroundSize: width,
-      height
+      backgroundSize: width
     };
     const paddingTop = 40 * height / 556, paddingBottom = 100 * height / 556;
     const tipStyle = {
