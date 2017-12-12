@@ -3,6 +3,20 @@ import PropTypes from 'prop-types';
 import './tvoc.css';
 import arrow from './arrow.png';
 class Tvoc extends PureComponent {
+
+  getValue(value, height) {
+    const a = height / 332;
+    const bt = 12 * a;
+    const temp  = 92 * a;
+    if(value <= 0.5) {
+      return bt + value * temp / 0.5;
+    }
+    if(value <= 0.6) {
+      return 2 * bt + temp + (value - 0.5) * temp / 0.1;
+    }
+    return 3 * bt + 2 * temp + (value - 0.6) * temp / 0.4;
+  }
+  
   render() {
     const {
       height = 332,
@@ -18,11 +32,11 @@ class Tvoc extends PureComponent {
     };
     return (
       <div className="tvoc" style={styles}>
-        <div className="tip" style={{height: height - 30 * a, fontSize: 14 * a}}>
+        <div className="tip" style={{fontSize: 14 * a}}>
           <div>high</div>
           <div>mid</div>
           <div>low</div>
-          <img src={arrow} style={{width: 70 * a, bottom: (12 * a + value * (height - 36 * a))}} className="tvoc-arrow"/>
+          <img src={arrow} style={{width: 70 * a, bottom: this.getValue(value, height)}} className="tvoc-arrow"/>
         </div>
       </div>
     );
