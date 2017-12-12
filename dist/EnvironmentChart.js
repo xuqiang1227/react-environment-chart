@@ -2324,6 +2324,20 @@ var Tvoc = function (_PureComponent) {
   }
 
   _createClass(Tvoc, [{
+    key: 'getValue',
+    value: function getValue(value, height) {
+      var a = height / 332;
+      var bt = 12 * a;
+      var temp = 92 * a;
+      if (value <= 0.5) {
+        return bt + value * temp / 0.5;
+      }
+      if (value <= 0.6) {
+        return 2 * bt + temp + (value - 0.5) * temp / 0.1;
+      }
+      return 3 * bt + 2 * temp + (value - 0.6) * temp / 0.4;
+    }
+  }, {
     key: 'render',
     value: function render() {
       var _props = this.props,
@@ -2345,7 +2359,7 @@ var Tvoc = function (_PureComponent) {
         { className: 'tvoc', style: styles },
         _react2.default.createElement(
           'div',
-          { className: 'tip', style: { height: height - 30 * a, fontSize: 14 * a } },
+          { className: 'tip', style: { fontSize: 14 * a } },
           _react2.default.createElement(
             'div',
             null,
@@ -2361,7 +2375,7 @@ var Tvoc = function (_PureComponent) {
             null,
             'low'
           ),
-          _react2.default.createElement('img', { src: _arrow2.default, style: { width: 70 * a, bottom: 12 * a + value * (height - 36 * a) }, className: 'tvoc-arrow' })
+          _react2.default.createElement('img', { src: _arrow2.default, style: { width: 70 * a, bottom: this.getValue(value, height) }, className: 'tvoc-arrow' })
         )
       );
     }
@@ -2421,7 +2435,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".tvoc {\r\n  position: relative;\r\n  background: url(" + __webpack_require__(38) + ") no-repeat;\r\n  text-align: right;\r\n}\r\n.tip {\r\n  padding: 10px 0;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.tvoc-arrow {\r\n  position: absolute;\r\n}", ""]);
+exports.push([module.i, ".tvoc {\r\n  position: relative;\r\n  background: url(" + __webpack_require__(38) + ") no-repeat;\r\n  text-align: right;\r\n}\r\n.tip {\r\n  height: 100%;\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.tip > div {\r\n  margin: 20px 0;\r\n}\r\n.tvoc-arrow {\r\n  position: absolute;\r\n}", ""]);
 
 // exports
 
@@ -2509,12 +2523,8 @@ var Temperature = function (_PureComponent) {
         height: height,
         backgroundSize: width
       };
-      var paddingTop = 40 * a,
-          paddingBottom = 100 * a;
       var tipStyle = {
-        paddingTop: paddingTop,
-        paddingBottom: paddingBottom,
-        height: height - paddingBottom - paddingTop,
+        height: height - 102 * a,
         fontSize: 14 * a
       };
       var arrowStyle = {
@@ -2527,7 +2537,7 @@ var Temperature = function (_PureComponent) {
         { className: 'temperature', style: styles },
         _react2.default.createElement(
           'div',
-          { className: 'tip', style: tipStyle },
+          { className: 'tips', style: tipStyle },
           _react2.default.createElement(
             'div',
             null,
@@ -2600,7 +2610,7 @@ exports = module.exports = __webpack_require__(2)();
 
 
 // module
-exports.push([module.i, ".temperature {\r\n  background: url(" + __webpack_require__(42) + ") no-repeat;\r\n  background-position: right;\r\n  position: relative;\r\n}\r\n.tip {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.arrow {\r\n  position: absolute;\r\n}", ""]);
+exports.push([module.i, ".temperature {\r\n  background: url(" + __webpack_require__(42) + ") no-repeat;\r\n  background-position: right;\r\n  position: relative;\r\n}\r\n.tips {\r\n  display: flex;\r\n  flex-direction: column;\r\n  justify-content: space-between;\r\n}\r\n.tips > div {\r\n  margin-top: 20px; \r\n}\r\n.arrow {\r\n  position: absolute;\r\n}", ""]);
 
 // exports
 
