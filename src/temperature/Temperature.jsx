@@ -1,25 +1,47 @@
 import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import './temperature.css';
+import arrow from '../tvoc/arrow.png';
 
 class Temperature extends PureComponent {
+  getTemperature(value) {
+    if(value < 0) {
+      value = 0;
+    }
+    if(value > 40) {
+      value = 40;
+    }
+    if(value <= 20) {
+      return value * 428 / 6 * 4 / 20;
+    } else {
+      return ((value - 20 ) * 428 / 6 * 2 / 20 + 428 / 6 * 4); 
+    }
+  }
+
   render() {
     const {
       height = 556,
-      tips = []
+      tips = [],
+      value = 0
     } = this.props;
-    const width = 225 * height / 556;
+    const a = height / 556;
+    const width = 225 * a;
     const styles = {
-      width: width + 65,
+      width: width + 85 * a,
       height,
       backgroundSize: width
     };
-    const paddingTop = 40 * height / 556, paddingBottom = 100 * height / 556;
+    const paddingTop = 40 * a, paddingBottom = 100 * a;
     const tipStyle = {
       paddingTop,
       paddingBottom,
       height: height - paddingBottom - paddingTop,
-      fontSize: 14 * height / 556
+      fontSize: 14 * a
+    };
+    const arrowStyle = {
+      left: 107 * a,
+      width: 70 * a,
+      bottom: (102 * a + this.getTemperature(value) * a)
     };
     return (
       <div className="temperature" style={styles}>
@@ -29,6 +51,7 @@ class Temperature extends PureComponent {
           <div>{tips[1] || '加衣服'}</div>
           <div>{tips[0] || '天冷'}</div>
         </div>
+        <img className="arrow" src={arrow} style={arrowStyle}/>
       </div>
     );
   }
@@ -36,7 +59,8 @@ class Temperature extends PureComponent {
 
 Temperature.propTypes = {
   height: PropTypes.number,
-  tips: PropTypes.array
+  tips: PropTypes.array,
+  value: PropTypes.number
 }
 
 export default Temperature;

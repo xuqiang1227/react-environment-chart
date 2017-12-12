@@ -1,9 +1,13 @@
 .temperature {
   background: url('./temperature.png') no-repeat;
   background-position: right;
+  position: relative;
 }
 .tip {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.arrow {
+  position: absolute;
 }
