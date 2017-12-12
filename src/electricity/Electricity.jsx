@@ -38,7 +38,7 @@ class Electricity extends PureComponent {
       left: (width - centerSize) / 2
     }
     return(
-      <div className={"pm"} style={pmStyle}>
+      <div className={"electricity"} style={pmStyle}>
         <img className="arrow" src={arrow} style={arrowStyle}/>
         <img className="center" src={center} style={centerStyle}/>
       </div>
