@@ -61,6 +61,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
 
 ### Tvoc
 * height: number, option. specify tvoc size; default: 332
+* value: number, option. value is between [0, 1]
 * using
   ```javascript
   import {Tvoc} from 'react-environment-chart';

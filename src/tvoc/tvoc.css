@@ -1,4 +1,5 @@
 .tvoc {
+  position: relative;
   background: url('./TVOC.png') no-repeat;
   text-align: right;
 }
@@ -7,4 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.tvoc-arrow {
+  position: absolute;
 }
