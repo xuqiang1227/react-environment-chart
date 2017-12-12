@@ -3,10 +3,13 @@
   background-position: right;
   position: relative;
 }
-.tip {
+.tips {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.tips > div {
+  margin-top: 20px; 
 }
 .arrow {
   position: absolute;

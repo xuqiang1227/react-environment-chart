@@ -31,11 +31,8 @@ class Temperature extends PureComponent {
       height,
       backgroundSize: width
     };
-    const paddingTop = 40 * a, paddingBottom = 100 * a;
     const tipStyle = {
-      paddingTop,
-      paddingBottom,
-      height: height - paddingBottom - paddingTop,
+      height: height - 102 * a,
       fontSize: 14 * a
     };
     const arrowStyle = {
@@ -45,7 +42,7 @@ class Temperature extends PureComponent {
     };
     return (
       <div className="temperature" style={styles}>
-        <div className="tip" style={tipStyle}>
+        <div className="tips" style={tipStyle}>
           <div>{tips[3] || '防暑'}</div>
           <div>{tips[2] || '温度舒适'}</div>
           <div>{tips[1] || '加衣服'}</div>
