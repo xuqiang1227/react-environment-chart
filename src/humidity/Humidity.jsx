@@ -28,7 +28,7 @@ class Humidity extends PureComponent {
     const arrowStyle = {
       width: arrowWidth,
       height: arrowHeight,
-      bottom: (33.5 * a) ,
+      bottom: (64 * a) / 2 ,
       left: (width - arrowWidth) / 2 + 25.5,
       transform: `rotate(${(rotate * 180 / 100) - 90}deg)`,
       transformOrigin: `center bottom`
@@ -37,7 +37,7 @@ class Humidity extends PureComponent {
     const centerStyle = {
       width: centerSize,
       height: centerSize,
-      bottom: (67 * a - centerSize) / 2,
+      bottom: (64 * a - centerSize) / 2,
       left: (width - centerSize) / 2 + 25.5
     }
     return (
