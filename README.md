@@ -73,7 +73,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
 
 ### Temperature
 * height: number, option. specify temperature size; default: 556
-* tips: array, option. specity left text; default: ['天冷', '加衣服', '温度舒适', '防暑']
+* tips: array, option. specity left text; default: ['Freezing', 'Cold', 'Cosy', 'Hot']
 * value: number, option. temperature vlaue
 * using
   ```javascript
@@ -82,4 +82,4 @@ import ReactEnvironmentChart from 'react-environment-chart';
   ```
 * eg:
 
-![Temperature](https://static.oschina.net/uploads/img/201712/11114124_PwLJ.png)
+![Temperature](https://static.oschina.net/uploads/img/201712/25144919_rbir.png)
