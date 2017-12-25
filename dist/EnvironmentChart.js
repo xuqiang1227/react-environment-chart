@@ -2009,6 +2009,9 @@ var Humidity = function (_PureComponent) {
     key: 'render',
     value: function render() {
       var rotate = this.props.value || 0;
+      var _props$tips = this.props.tips,
+          tips = _props$tips === undefined ? [] : _props$tips;
+
       if (rotate < 0) {
         rotate = 0;
       }
@@ -2045,17 +2048,17 @@ var Humidity = function (_PureComponent) {
         _react2.default.createElement(
           'div',
           { className: 'dry' },
-          'dry'
+          tips[0] || 'dry'
         ),
         _react2.default.createElement(
           'div',
           { className: 'comfort' },
-          'comfort'
+          tips[1] || 'comfort'
         ),
         _react2.default.createElement(
           'div',
           { className: 'wet' },
-          'wet'
+          tips[2] || 'wet'
         ),
         _react2.default.createElement('div', { className: 'humidity', style: { height: height, width: width, backgroundSize: width + 'px' } }),
         _react2.default.createElement('img', { className: 'arrow', src: _arrow2.default, style: arrowStyle }),
@@ -2069,7 +2072,8 @@ var Humidity = function (_PureComponent) {
 
 Humidity.PropTypes = {
   height: _propTypes2.default.number,
-  value: _propTypes2.default.number
+  value: _propTypes2.default.number,
+  tips: _propTypes2.default.array
 };
 
 exports.default = Humidity;
