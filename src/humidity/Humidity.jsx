@@ -11,6 +11,7 @@ class Humidity extends PureComponent {
 
   render() {
     let rotate = this.props.value || 0;
+    const {tips = []} = this.props;
     if(rotate < 0) {
       rotate = 0;
     }
@@ -42,9 +43,9 @@ class Humidity extends PureComponent {
     }
     return (
       <div className="normal" style={humidityStyles}>
-        <div className="dry">dry</div>
-        <div className="comfort">comfort</div>
-        <div className="wet">wet</div>
+        <div className="dry">{tips[0] || 'dry'}</div>
+        <div className="comfort">{tips[1] || 'comfort'}</div>
+        <div className="wet">{tips[2] || 'wet'}</div>
         <div className="humidity" style={{height, width, backgroundSize: `${width}px`}}></div>
         <img className="arrow" src={arrow} style={arrowStyle}/>
         <img className="center" src={center} style={centerStyle}/>
@@ -55,7 +56,8 @@ class Humidity extends PureComponent {
 
 Humidity.PropTypes = {
   height: PropTypes.number,
-  value: PropTypes.number
+  value: PropTypes.number,
+  tips: PropTypes.array
 }
 
 export default Humidity;

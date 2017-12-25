@@ -1,4 +1,5 @@
-# React Environment charts
+> React Environment charts
+
 [![npm](https://img.shields.io/npm/v/react-environment-chart.svg?maxAge=2592000?style=plastic)](https://www.npmjs.com/package/react-environment-chart)
 [![NPM downloads](http://img.shields.io/npm/dm/react-environment-chart.svg?style=flat-plastic)](https://npmjs.org/package/react-environment-chart)
 
@@ -38,6 +39,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
 ### Humidity
 * height: number, option. specify humidity size; default: 252
 * value: number. humidity value
+* tips: array. default: ['dry', 'comfort', 'wet']
 * using
   ```javascript
   import {Humidity} from 'react-environment-chart';
@@ -78,7 +80,7 @@ import ReactEnvironmentChart from 'react-environment-chart';
 * using
   ```javascript
   import {Temperature} from 'react-environment-chart';
-  <Temperature />
+  <Temperature value={0}/>
   ```
 * eg:
 
