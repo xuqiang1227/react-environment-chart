@@ -8,8 +8,8 @@ class Electricity extends PureComponent {
 
   render() {
     let value = this.props.value || 0;
-    if(value > 10) {
-      value = 10;
+    if(value > 100) {
+      value = 100;
     }
     if(value < 0) {
       value = 0;
@@ -27,7 +27,7 @@ class Electricity extends PureComponent {
       height: arrowHeight,
       top: height / 2 - arrowHeight,
       left: (width - arrowWidth) / 2,
-      transform: `rotate(${30 + 30 * value + 180}deg)`,
+      transform: `rotate(${30 + 3 * value + 180}deg)`,
       transformOrigin: `center bottom`
     }
     const centerSize = 34 * height / 373;

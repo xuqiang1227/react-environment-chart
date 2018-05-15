@@ -22,7 +22,7 @@
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
     "dist": "npm run copy & webpack --env=dist",
-    "build": "webpack",
+    "build": "webpack -p",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
     "release:major": "npm version major && npm publish && git push --follow-tags",
@@ -44,6 +44,7 @@
     "babel-runtime": "^6.3.13",
     "bower-webpack-plugin": "^0.1.9",
     "copyfiles": "^1.0.0",
+    "core-js": "^2.0.0",
     "css-loader": "^0.23.0",
     "eslint": "^3.0.0",
     "eslint-loader": "^1.0.0",
@@ -63,7 +64,6 @@
     "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
-    "core-js": "^2.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
   },
